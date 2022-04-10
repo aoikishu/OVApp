@@ -1,0 +1,215 @@
+{
+    "Name": "",
+    "Defense": 0,
+    "Health": 40,
+    "Endurance": 40,
+    "ThreatValue": 0,
+    "NetLevel": 1,
+    "Abilities": [
+        {
+            "Name": "Position of Power",
+            "Description": "You hold power and influence based on level.",
+            "Level": 1
+        },
+        {
+            "Name": "Position of Power",
+            "Description": "You hold power and influence based on level.",
+            "Level": 1
+        },
+        {
+            "Name": "Companion",
+            "Description": "You have companion with Health & Endurance of 20. Has Abilities and Weaknesses equal to your level in companion.",
+            "Level": 1
+        },
+        {
+            "Name": "Telekinesis",
+            "Description": "Roll telekinesis much like the strong ability to move heavy objects. You can add your telekinesis level as a bonus to your DX when performing an attack with telekinesis.",
+            "Level": 1
+        },
+        {
+            "Name": "Illusionist",
+            "Description": "Create an illusion. Roll your illusionist dice and the result becomes the DN for others to beat. You may receive a bonus or penalty depending on the complexity of the illusion.",
+            "Level": 1
+        }
+    ],
+    "Weaknesses": [
+        {
+            "Name": "Mute",
+            "Description": "",
+            "Level": 1
+        },
+        {
+            "Name": "Emotionless",
+            "Description": "",
+            "Level": 1
+        },
+        {
+            "Name": "Compulsion",
+            "Description": "",
+            "Level": 1
+        },
+        {
+            "Name": "Rival",
+            "Description": "",
+            "Level": 1
+        }
+    ],
+    "Attacks": [
+        {
+            "Roll": 2,
+            "DX": 1,
+            "EnduranceCost": 15,
+            "perks": [
+                {
+                    "Name": "No Gesture",
+                    "Description": "Normally, Abilities require some sort of movement or gesture to make them work, whether it is just pointing your finger, weaving a magic spell, or actually dealing some physical blow. With this Perk, you require no movements at all to perform the Ability.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Affinity",
+                    "Description": "Affinities are a special kind of Perk that can be applied to any Ability without an additional Endurance cost. These Affinities describe the source of the Ability’s strength or the nature of its power. Your Ability may be a fiery attack to roast your enemies, a focus of your spiritual energy from years of martial arts training, or magic imbued with holy power. Just write it down next to the Ability like any other Perk. Most of the time, an Affinity is a cosmetic choice, but there may come a time when the exact type of power you wield can make a big difference. The Resistance Ability and the Vulnerability Weakness are just two cases where Affinity can matter.",
+                    "Level": 1,
+                    "Modifier": 0
+                },
+                {
+                    "Name": "Impairing",
+                    "Description": "Your attack hits them where it hurts. Whether by making use of devastating weaponry, striking pressure points, or just whacking really hard, you only need to inflict a quarter of your opponent’s total Health to inflict the Impaired Complication. Or, if you choose, you may forgo dealing Damage at all and Impair automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+                    "Level": 1,
+                    "Modifier": 10
+                },
+                {
+                    "Name": "Impairing",
+                    "Description": "Your attack hits them where it hurts. Whether by making use of devastating weaponry, striking pressure points, or just whacking really hard, you only need to inflict a quarter of your opponent’s total Health to inflict the Impaired Complication. Or, if you choose, you may forgo dealing Damage at all and Impair automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+                    "Level": 1,
+                    "Modifier": 10
+                }
+            ],
+            "flaws": [
+                {
+                    "Name": "Weapon",
+                    "Description": "This attack is actually a weapon, be it a blade, a gun, or something in between. Should you lose it, have it taken from you, or find yourself disarmed during a battle, you may no longer use this attack.",
+                    "Level": 1,
+                    "Modifier": -5
+                },
+                {
+                    "Name": "Ammunition",
+                    "Description": "Your Ability may only be activated a certain number of times before it becomes useless. This could represent bullets in a gun, charges in an electric baton, or a limited grant of power from a divine entity. This Flaw may be taken multiple times; if taken once, the Ability can be used around five times. If taken twice, around three times. If taken three times, this Ability can only be used once. While the exact method of recharging this Ability is up to you, it is generally appropriate that it takes a full day or at least extensive off time. If the character can simply reload the Ability with little effort, consider another Flaw, like Activation, instead.",
+                    "Level": 1,
+                    "Modifier": -5
+                }
+            ]
+        },
+        {
+            "Roll": 2,
+            "DX": 1,
+            "EnduranceCost": 0,
+            "perks": [
+                {
+                    "Name": "Ranged Strength Powered",
+                    "Description": "Your Ability can now strike distant targets, as with the Ranged Perk, and is subject to the same benefits and disadvantages. However, you may now include any Strong Bonuses your character can muster in your Damage Multiplier. By the same token, any Weak Penalties will apply, and this Perk is not recommended for characters with that Weakness.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Impairing",
+                    "Description": "Your attack hits them where it hurts. Whether by making use of devastating weaponry, striking pressure points, or just whacking really hard, you only need to inflict a quarter of your opponent’s total Health to inflict the Impaired Complication. Or, if you choose, you may forgo dealing Damage at all and Impair automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+                    "Level": 1,
+                    "Modifier": 10
+                }
+            ],
+            "flaws": [
+                {
+                    "Name": "Delayed",
+                    "Description": "This Ability does not take effect until just before the start of your next turn. If you receive a Complication or are otherwise compromised before this time, then the Ability does not work, and Endurance is lost. Making Defense Rolls, or even being hit, will not affect this Ability.",
+                    "Level": 1,
+                    "Modifier": -5
+                },
+                {
+                    "Name": "Break",
+                    "Description": "This Ability may only be used once you have exhausted either all of your Health or all of your Endurance. Perhaps you need to build up rage to unleash a fierce attack, or maybe you only feel empowered when the tide of battle has turned against you.",
+                    "Level": 1,
+                    "Modifier": -10
+                }
+            ]
+        },
+        {
+            "Roll": 2,
+            "DX": 2,
+            "EnduranceCost": 20,
+            "perks": [
+                {
+                    "Name": "Effective",
+                    "Description": "Your Ability is more effective than others of the same Level. This Perk can be taken multiple times; for each time it is taken, add 1 to your Damage Multiplier when using this Ability.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Defensive",
+                    "Description": "The best defense may be a good offense, but a defensive offense is even better. Your attack, whether it’s bashing with a huge shield, bouncing to and fro, or by some other means, improves your Defense even if it misses. This Perk may be taken multiple times; for each time you take Defensive, increase your Defense Rolls by one until your next turn.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Vampire",
+                    "Description": "Your attack is capable of replenishing your Health at the expense of your enemy’s. It could be a magical effect, or perhaps you truly are a vampire and suck the life out of them. This Perk may be taken multiple times; for each time Vampire is applied, you may restore a quarter of the Damage you inflict with this attack, rounded up. Health can never be restored beyond its maximum this way.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Multiple Targets",
+                    "Description": "Your Ability can selectively affect multiple targets, whether by splitting apart, emitting numerous rays, or just jumping from one to another. This Perk may be taken multiple times; for each time Multiple Targets is taken, you may select up to one additional target for your Ability. The same Attack Roll result is used for all targets, and this Perk does not allow the Ability to affect the same target twice. (Unlike the Area Effect Perk, targets do not have to be in close proximity to each other, nor do you have to worry about affecting unintended targets.)",
+                    "Level": 1,
+                    "Modifier": 10
+                }
+            ],
+            "flaws": [
+                {
+                    "Name": "Unwieldy",
+                    "Description": "Your Ability is of a nature that makes you unsteady after its use. It might be an immense weapon, or perhaps you just become woozy from exhaustion. This Flaw may be taken multiple times; for each time it is taken, you receive a –1 Penalty to Defense Rolls until your next turn.",
+                    "Level": 1,
+                    "Modifier": -5
+                }
+            ]
+        },
+        {
+            "Roll": 3,
+            "DX": 1,
+            "EnduranceCost": 25,
+            "perks": [
+                {
+                    "Name": "Accurate",
+                    "Description": "Your attack can hit opponents with greater ease than normal. This could be a homing projectile, a strike so quick dodging is difficult, or simply a blow with improved accuracy. This Perk can be taken multiple times; for each time Accurate is taken, add one die to your Attack Roll.",
+                    "Level": 1,
+                    "Modifier": 5
+                },
+                {
+                    "Name": "Overwhelming",
+                    "Description": "Your attack is actually not one strike but many in the span of a second. These attacks come so quickly that opponents must spend their next action to even be eligible for a Defense Roll. If they do not, the attack is made against a Defense of zero.",
+                    "Level": 1,
+                    "Modifier": 15
+                },
+                {
+                    "Name": "Disarming",
+                    "Description": "Your attack takes the opponent off guard and activates a Weakness or Flaw, whether by literally disarming a weapon in their grasp or disarming them emotionally. You only need to inflict a quarter of your opponent’s total Health to inflict the Weakness/Flaw Complication. Or, if you choose, you may forgo dealing Damage at all and activate a Weakness or Flaw automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+                    "Level": 1,
+                    "Modifier": 10
+                }
+            ],
+            "flaws": [
+                {
+                    "Name": "Cancel",
+                    "Description": "Your Ability does not work on a certain class of targets. If this is fairly rare, such as combatants made entirely of metal, you receive –5 to the Endurance cost. If it’s incredibly common, like humans, you can get up to –20. If the Cancel is something that is ridiculously uncommon, like hippopotamuses, you get no subtraction to Endurance.",
+                    "Level": 1,
+                    "Modifier": 0
+                },
+                {
+                    "Name": "Unwieldy",
+                    "Description": "Your Ability is of a nature that makes you unsteady after its use. It might be an immense weapon, or perhaps you just become woozy from exhaustion. This Flaw may be taken multiple times; for each time it is taken, you receive a –1 Penalty to Defense Rolls until your next turn.",
+                    "Level": 1,
+                    "Modifier": -5
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,534 @@
+{
+	"Weaknesses": [
+		{
+			"Name": "Absent Minded",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Accidental Transformation",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Ageism",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Airhead",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Awkward Size",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Bizarre Appearance",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Clumsy",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Code of Conduct",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Compulsion",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Coward",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Crybaby",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Dense",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Dependency",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Dull",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Easily Distracted",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Emotionless",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Endurance Use",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Fear",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Focus",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Frail",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Fussy",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Greedy",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Guardian",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Hatred",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Impaired Sense",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Impulsive",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Ineptitude",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Infamous",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Jittery",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Kind Hearted",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Languid",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Lecherous",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Limited Uses",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Loner",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Love Interest",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Love Magnet",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Mute",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Naive",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Nosebleeder",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Oblivious",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Obsession",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Outcast",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Overconfident",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Pacifist",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Poor",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Quirk",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Restricted Freedom",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Rival",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Room for Two",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Rude",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Secret",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Sensitivity",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Servitude",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Short Tempered",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Slow",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Soft Spot",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Split Personality",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Stubborn",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Suppressed Power",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Trigger",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Unique Weakness",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Unlucky",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Vulnerability",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Wanted",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Weak",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		},
+		{
+			"Name": "Weak Willed",
+			"Description" : {
+				"Level1": "",
+				"Level2": "",
+				"Level3": ""
+			}
+		}
+	]
+}
+
+

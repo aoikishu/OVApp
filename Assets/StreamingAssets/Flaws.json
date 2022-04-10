@@ -1,0 +1,114 @@
+{
+	"Flaws": [
+		{
+			"Name": "Activation",
+			"Description": "Your Ability requires time to activate before each use. This could be due to cocking, reloading, aiming, recharging, or one of many other reasons. You must spend an entire Round to activate your Ability, but you may still make Defense Rolls to any incoming attacks. On your next turn (or any turn thereafter), you may use your Ability as normal. Once the Ability is used, time must be spent to activate it again.",
+			"Modifier": -10
+		},
+		{
+			"Name": "Ammunition",
+			"Description": "Your Ability may only be activated a certain number of times before it becomes useless. This could represent bullets in a gun, charges in an electric baton, or a limited grant of power from a divine entity. This Flaw may be taken multiple times; if taken once, the Ability can be used around five times. If taken twice, around three times. If taken three times, this Ability can only be used once. While the exact method of recharging this Ability is up to you, it is generally appropriate that it takes a full day or at least extensive off time. If the character can simply reload the Ability with little effort, consider another Flaw, like Activation, instead.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Assisted",
+			"Description": "This Ability requires an ally’s help to function. They might launch you in the air for a devastating dive attack, or you might pool your energies together to power the Ability. In any case, those assisting you with this Ability lose their next action, but they may spend up to half of the Endurance cost of this Ability for you if they choose. This Perk may be taken multiple times; for each time it is taken, you need an additional helping hand.",
+			"Modifier": -15
+		},
+		{
+			"Name": "Backlash",
+			"Description": "Your attack comes at the cost of your own well-being, and you may be injured through its use. This Flaw may be taken multiple times; for each time, you receive a quarter of the Damage you inflict with the attack, rounded up.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Break",
+			"Description": "This Ability may only be used once you have exhausted either all of your Health or all of your Endurance. Perhaps you need to build up rage to unleash a fierce attack, or maybe you only feel empowered when the tide of battle has turned against you.",
+			"Modifier": -10
+		},
+		{
+			"Name": "Buildup",
+			"Description": "You cannot use your Ability right away but must wait for its power to build up. It could be an energy weapon that requires charging, a martial arts move you have to limber up for, or just a need to have dramatic timing. This Flaw may be taken multiple times; for each time Buildup is taken, you must wait a Round before using the Ability. No action is necessary (or lost) to build up. Once the Ability has been used, the waiting period begins again.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Cancel",
+			"Description": "Your Ability does not work on a certain class of targets. If this is fairly rare, such as combatants made entirely of metal, you receive –5 to the Endurance cost. If it’s incredibly common, like humans, you can get up to –20. If the Cancel is something that is ridiculously uncommon, like hippopotamuses, you get no subtraction to Endurance.",
+			"Modifier": 0
+		},
+		{
+			"Name": "Concentration",
+			"Description": "This Ability requires a Round of your undivided attention. You must make no action, and if you are severely distracted, get injured, or make a Defense Roll, the Ability does not work and Endurance is expended anyway. Otherwise, on your next turn you may perform your Ability as normal. This Flaw may be taken multiple times, each increasing the turns required to prepare.",
+			"Modifier": -20
+		},
+		{
+			"Name": "Delayed",
+			"Description": "This Ability does not take effect until just before the start of your next turn. If you receive a Complication or are otherwise compromised before this time, then the Ability does not work, and Endurance is lost. Making Defense Rolls, or even being hit, will not affect this Ability.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Elaborate Gestures",
+			"Description": "In order to use this Ability, your entire body must be free to perform some elaborate motion, dance, or ritual. You cannot be holding items, pulling things, navigating terrain, or otherwise occupying any part of your body with another task.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Feather Blow",
+			"Description": "Your attack is of such a nature that it cannot be used to inflict Complications. There is no additional effect if half a target’s Health is lost.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Finisher",
+			"Description": "Your attack is only effective against a target that has already lost all Health. Otherwise, it does no Damage.",
+			"Modifier": -10
+		},
+		{
+			"Name": "Inaccurate",
+			"Description": "Your attack has a tendency to miss. You may have yet to master it, or the attack is just imprecise by nature. Regardless of the cause, you receive a –1 Penalty to your Attack Roll. This Flaw may be taken multiple times, increasing the Penalty by one each time it is applied.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Ineffective",
+			"Description": "This Ability is not as effective as others of the same Level. This Flaw may be taken multiple times; for each time you take Ineffective, reduce your Damage Multiplier by 1 when using this Ability. If your Damage Multiplier would be reduced to zero, reduce it to ½ instead.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Low Penetration",
+			"Description": "Your attack is unusually susceptible to armor. For each time you take Low Penetration, treat your opponent’s Armored Ability as if it were two Levels higher, to a maximum of +5. If the opponent does not have the Armored Ability, there is no additional effect.",
+			"Modifier": -5
+		},
+		{
+			"Name": "No Damage",
+			"Description": "Your attack is not much of an attack at all. Regardless of how good of a result you receive on your Attack Roll, you can never inflict any Damage. However, any other Perks and Complications work as normal. You may not combine this with the Ineffective Flaw.",
+			"Modifier": -20
+		},
+		{
+			"Name": "Open to Attack",
+			"Description": "After completing your Ability, you cannot make any Defense Rolls until your next turn. You may be exhaustively spent, have temporarily exposed a critical weak point, or otherwise thrown caution, and a proper defense, to the wind.",
+			"Modifier": -25
+		},
+		{
+			"Name": "Recoil",
+			"Description": "This Ability packs enough of a punch to knock you off your feet. When used, you immediately receive the Stunned Complication.",
+			"Modifier": -10
+		},
+		{
+			"Name": "Requirement",
+			"Description": "Your Ability may only be used if a certain condition is met. If the requirement is easily accessible (Need Lots of Room), it is worth –5 Endurance, while an extremely rare and specific requirement (Must Be the 12th Day of the 4th Month of the Ancient Galbelzan Calendar and a Full Blue Moon) can be worth up to –20. Well, okay, perhaps not that precise, but you get the idea.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Self Only",
+			"Description": "This Ability may only be used on yourself. It cannot be shared with others or otherwise targeted at other persons or objects. If an Ability is already only usable in this way, then this Flaw should not be taken.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Unwieldy",
+			"Description": "Your Ability is of a nature that makes you unsteady after its use. It might be an immense weapon, or perhaps you just become woozy from exhaustion. This Flaw may be taken multiple times; for each time it is taken, you receive a –1 Penalty to Defense Rolls until your next turn.",
+			"Modifier": -5
+		},
+		{
+			"Name": "Weapon",
+			"Description": "This attack is actually a weapon, be it a blade, a gun, or something in between. Should you lose it, have it taken from you, or find yourself disarmed during a battle, you may no longer use this attack.",
+			"Modifier": -5
+		}
+	]
+}

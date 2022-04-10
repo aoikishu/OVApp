@@ -1,0 +1,129 @@
+{
+	"Perks": [
+		{
+			"Name": "Accurate",
+			"Description": "Your attack can hit opponents with greater ease than normal. This could be a homing projectile, a strike so quick dodging is difficult, or simply a blow with improved accuracy. This Perk can be taken multiple times; for each time Accurate is taken, add one die to your Attack Roll.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Affinity",
+			"Description": "Affinities are a special kind of Perk that can be applied to any Ability without an additional Endurance cost. These Affinities describe the source of the Ability’s strength or the nature of its power. Your Ability may be a fiery attack to roast your enemies, a focus of your spiritual energy from years of martial arts training, or magic imbued with holy power. Just write it down next to the Ability like any other Perk. Most of the time, an Affinity is a cosmetic choice, but there may come a time when the exact type of power you wield can make a big difference. The Resistance Ability and the Vulnerability Weakness are just two cases where Affinity can matter.",
+			"Modifier": 0
+		},
+		{
+			"Name": "Area Effect",
+			"Description": "Your Ability can affect multiple targets by spreading itself over a wide area. This could be a coneshaped blast of energy, a circular explosion, or a dense array of bolts. This Perk may be taken multiple times; for each time Area Effect is added to an Ability, you may target up to three relatively close individuals, as deemed by the Game Master. If this Ability is an attack, those caught in the trajectory receive a one die Penalty to their Defense Roll for each time Area Effect is taken. This represents the difficulty to avoid an attack of such magnitude. Abilities with this Perk can affect both allies and enemies, so be careful when applying it!",
+			"Modifier": 10
+		},
+		{
+			"Name": "Armor Piercing",
+			"Description": "Your attack has the ability to bypass your opponent’s armor. Perhaps it is extremely sharp, hits with incredible impact, does damage through non-physical means, or has some other way of negating protection. This Perk may be taken multiple times; for each time Armor Piercing is applied to an Ability, you may act as if your opponent’s Armored Ability were two Levels less. If the opponent’s Armored is reduced to zero, or the opponent does not have Armored at all, nothing additional happens.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Barrier Buster",
+			"Description": "Your attack can overwhelm an opponent’s use of the Barrier Ability. It may pack an incredible wallop or is specifically designed to take down defensive shields. Whatever the case, the defender may still roll their Barrier dice as they normally would. However, if the Attack Roll ever bests the Barrier roll by any amount, your opponent is not allowed to spend additional Endurance to block the attack. In addition, the character is immediately Stunned, regardless of the amount of Health lost.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Blinding",
+			"Description": "Your attack has the ability to hinder the vision of others. It might be a dark, blinding substance over the eyes, a brilliant flash, or some trick of the mind. Characters struck by the attack have a –3 Penalty to all vision-reliant actions until the effect wears off or is otherwise neutralized. The blindness wears off naturally in a number of Rounds equal to the Level of your Attack Ability.",
+			"Modifier": 20
+		},
+		{
+			"Name": "Continued Effect",
+			"Description": "Your Ability continues to affect its target after use. This can be represented as a burning or poisoning attack or a magical aura that continues to heal. Until the effect is somehow neutralized, or a number of Rounds equal to the Level of your Ability pass, it will continue dealing (or healing) half of the original Damage inflicted each Round, rounded up. If this Perk is taken twice, use the full amount of Damage.",
+			"Modifier": 10
+		},
+		{
+			"Name": "Defensive",
+			"Description": "The best defense may be a good offense, but a defensive offense is even better. Your attack, whether it’s bashing with a huge shield, bouncing to and fro, or by some other means, improves your Defense even if it misses. This Perk may be taken multiple times; for each time you take Defensive, increase your Defense Rolls by one until your next turn.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Disarming",
+			"Description": "Your attack takes the opponent off guard and activates a Weakness or Flaw, whether by literally disarming a weapon in their grasp or disarming them emotionally. You only need to inflict a quarter of your opponent’s total Health to inflict the Weakness/Flaw Complication. Or, if you choose, you may forgo dealing Damage at all and activate a Weakness or Flaw automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+			"Modifier": 10
+		},
+		{
+			"Name": "Effective",
+			"Description": "Your Ability is more effective than others of the same Level. This Perk can be taken multiple times; for each time it is taken, add 1 to your Damage Multiplier when using this Ability.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Fatiguing",
+			"Description": "Your attack works as normal, but instead of dealing Damage to Health, it takes away directly from your opponent’s Endurance. If their Endurance is zero, this attack will begin to take from Health.",
+			"Modifier": 0
+		},
+		{
+			"Name": "Impairing",
+			"Description": "Your attack hits them where it hurts. Whether by making use of devastating weaponry, striking pressure points, or just whacking really hard, you only need to inflict a quarter of your opponent’s total Health to inflict the Impaired Complication. Or, if you choose, you may forgo dealing Damage at all and Impair automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+			"Modifier": 10
+		},
+		{
+			"Name": "Multiple Targets",
+			"Description": "Your Ability can selectively affect multiple targets, whether by splitting apart, emitting numerous rays, or just jumping from one to another. This Perk may be taken multiple times; for each time Multiple Targets is taken, you may select up to one additional target for your Ability. The same Attack Roll result is used for all targets, and this Perk does not allow the Ability to affect the same target twice. (Unlike the Area Effect Perk, targets do not have to be in close proximity to each other, nor do you have to worry about affecting unintended targets.)",
+			"Modifier": 10
+		},
+		{
+			"Name": "No Gesture",
+			"Description": "Normally, Abilities require some sort of movement or gesture to make them work, whether it is just pointing your finger, weaving a magic spell, or actually dealing some physical blow. With this Perk, you require no movements at all to perform the Ability.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Overwhelming",
+			"Description": "Your attack is actually not one strike but many in the span of a second. These attacks come so quickly that opponents must spend their next action to even be eligible for a Defense Roll. If they do not, the attack is made against a Defense of zero.",
+			"Modifier": 15
+		},
+		{
+			"Name": "Paralyzing",
+			"Description": "You can use your Ability to stop opponents in their tracks. You could have a long, whip-like weapon that entraps their limbs, the ability to freeze them in blocks of ice, or a debilitating electric shock. If this attack ever deals half of an opponent’s total Health, it inflicts the special Paralyzed Complication. The target not only loses the ability to take actions but also to defend, making further attacks compared to zero. The Paralyzed status can only be removed in a few ways: The original attacker receives a Complication, a number of Rounds pass equal to the Level of the Ability, or the Paralyzed character breaks free. During their turn, a Paralyzed character may attempt to break free by rolling any dice that could logically apply against the original Attack Roll. If successful, the Paralyzed character can act normally on their next turn. This Perk may be taken twice. If so, you only need to inflict a quarter of your opponent’s total Health, or you may choose to do no Damage and inflict the Paralyzed Complication automatically. You must still make a successful Attack Roll for this Perk to take effect. (While Strong or Evasive can be obvious Abilities for breaking free, creative Players may find other ways to nullify paralysis. Allies can sever constricting tentacles or melt an ice prison with a fiery attack. A paralyzing shock may be overcome with Iron-Willed. Players and the Game Master should use common sense in any scenario.)",
+			"Modifier": 10
+		},
+		{
+			"Name": "Ranged",
+			"Description": "Your Ability can affect targets at a range, allowing you to take down opponents from great distances and heights or otherwise affect faraway targets. However, your attack can no longer take advantage of any Bonuses from Strong and may be blocked or prevented by intervening obstacles. (To remedy the former, take the Ranged, Strength-Powered Perk instead. To ignore things in your way, take the Strike Through or Redirectable Perk.)",
+			"Modifier": 0
+		},
+		{
+			"Name": "Ranged Strength Powered",
+			"Description": "Your Ability can now strike distant targets, as with the Ranged Perk, and is subject to the same benefits and disadvantages. However, you may now include any Strong Bonuses your character can muster in your Damage Multiplier. By the same token, any Weak Penalties will apply, and this Perk is not recommended for characters with that Weakness.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Reach",
+			"Description": "Your attack has extensive reach that makes it difficult to engage you in combat. Perhaps you wield a hefty polearm, strike with immense claws, or just have one hell of a swing. The recipient of this attack, even if it misses, must choose a –1 Penalty to either their Attack or their Defense Rolls against you until your next turn. This Perk may be taken multiple times; for each time it is taken, increase the Penalty by one.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Redirectable",
+			"Description": "Even if your attack misses, by having this Perk, you may still have a chance to hit your target. On your next turn, just make your Attack Roll again to redirect the attack, no additional Endurance expenditure necessary. However, if you take another action besides a Defense Roll, you lose control of your attack and no more redirections can be made. You will also lose control if you are hit, injured, or otherwise severely distracted. You may only have this Perk if you also have the Ranged Perk. (By nature, the Redirectable Perk can also allow attacks to avoid intervening obstructions and other challenges that may have made other attacks difficult or impossible.)",
+			"Modifier": 5
+		},
+		{
+			"Name": "Strike Through",
+			"Description": "Your Ability is unhampered by any obstacles that may come in its path. This could be due to an incorporeal nature of its effect or simply an unparalleled capacity to permeate intervening objects. As such, you may always affect a target within range, regardless of what lies between you.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Stunning",
+			"Description": "Your attack has such force behind it that it only needs to inflict a quarter of your opponent’s total Health to cause the Stunned Complication. Or, if you choose, you may forgo dealing Damage at all and Stun automatically. You must still make a successful Attack Roll for this Perk to take effect.",
+			"Modifier": 10
+		},
+		{
+			"Name": "Trap",
+			"Description": "Your attack is such that you may spend an action to set it up ahead of time and choose a trigger for its activation, such as a target stepping in a certain place. When anyone sets off your trap, roll for Attack and Defense as normal, but the target is subject to surprised Penalties (see p. 109) and you spend no action.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Vampire",
+			"Description": "Your attack is capable of replenishing your Health at the expense of your enemy’s. It could be a magical effect, or perhaps you truly are a vampire and suck the life out of them. This Perk may be taken multiple times; for each time Vampire is applied, you may restore a quarter of the Damage you inflict with this attack, rounded up. Health can never be restored beyond its maximum this way.",
+			"Modifier": 5
+		},
+		{
+			"Name": "Will Attack",
+			"Description": "Your attack is inherently different in that it affects the mind of your opponent directly. Attack and Defense Rolls now use the Iron-Willed Ability and the Weak-Willed Weakness instead of the usual Agile/Clumsy and Quick/Slow.Combat Expert and Evasive may still apply depending on the nature of the attack.",
+			"Modifier": 0
+		}
+	]
+}
