@@ -8,11 +8,20 @@ public class DetailsPanel : MonoBehaviour
 {
     public static DetailsPanel Instance;
     public GameObject panel;
-    public TextMeshProUGUI Title;
-    public TMP_InputField Description;
-    public TextMeshProUGUI LevelOrModifierLabel;
-    public TextMeshProUGUI LevelOrModifierValue;
-    public Slider LevelOrModifierSlider;
+    [SerializeField]
+    private TextMeshProUGUI Title;
+    [SerializeField]
+    private TMP_InputField Description;
+    [SerializeField]
+    private TMP_InputField Notes;
+    [SerializeField]
+    private TextMeshProUGUI LevelOrModifierLabel;
+    [SerializeField]
+    private TextMeshProUGUI PgValue;
+    [SerializeField]
+    private TextMeshProUGUI LevelOrModifierValue;
+    [SerializeField]
+    private Slider LevelOrModifierSlider;
     private Stat stat;
 
     private void Awake()
@@ -25,29 +34,32 @@ public class DetailsPanel : MonoBehaviour
     {
         this.stat = stat;
         panel.SetActive(true);
-        SetTitle(stat.Name);
-        SetDescription(stat.Description);
-        LevelOrModifierLabel.text = "Level";
+        Title.text = (stat.Name);
+        Description.text = (stat.Description);
+        PgValue.text = stat.Page.ToString();
     }
 
     public void Open(Ability ability)
     {
         OpenStat(ability);
-        LevelOrModifierLabel.text = "Level";
+        LevelOrModifierLabel.text = "Lv";
         SetSlider(ability.Level, 1, 5);
+        Debug.Log($"Level {ability.Level}, Levels: {ability.Levels.Length}");
+        Describe(ability);
     }
 
     public void Open(Weakness weakness)
     {
         OpenStat(weakness);
-        LevelOrModifierLabel.text = "Level";
+        LevelOrModifierLabel.text = "Lv";
         SetSlider(weakness.Level, 1, 3);
+        Describe(weakness);
     }
 
     public void Open(Perk perk)
     {
         OpenStat(perk);
-        LevelOrModifierLabel.text = "Modifier";
+        LevelOrModifierLabel.text = "Mod";
         SetSlider(perk.Modifier, 0, 20);
         stat = perk;
     }
@@ -55,7 +67,7 @@ public class DetailsPanel : MonoBehaviour
     public void Open(Flaw flaw)
     {
         OpenStat(flaw);
-        LevelOrModifierLabel.text = "Modifier";
+        LevelOrModifierLabel.text = "Mod";
         SetSlider(flaw.Modifier, 0, 20);
         stat = flaw;
     }
@@ -63,16 +75,6 @@ public class DetailsPanel : MonoBehaviour
     public void Close()
     {
         panel.SetActive(false);
-    }
-
-    public void SetDescription(string value)
-    {
-        Description.text = value;
-    }
-
-    public void SetTitle(string value)
-    {
-        Title.text = value;
     }
 
     public void SetSlider(int value, int min, int max)
@@ -86,5 +88,24 @@ public class DetailsPanel : MonoBehaviour
     {
         LevelOrModifierValue.text = value.ToString();
         stat.Level = (int)value;
+        if (stat is Ability) Describe(stat as Ability);
+        else if (stat is Weakness) Describe(stat as Weakness);
+    }
+
+    private void Describe(Ability stat)
+    {
+        if (stat.Levels.Length > 0) {
+            if (!string.IsNullOrEmpty(stat.Description)) Description.text = stat.Description + "\n" + stat.Levels[stat.Level - 1];
+            else Description.text = stat.Levels[stat.Level - 1];
+        }
+    }
+
+    private void Describe(Weakness stat)
+    {
+        if (stat.Levels.Length > 0)
+        {
+            if (!string.IsNullOrEmpty(stat.Description)) Description.text = stat.Description + "\n" + stat.Levels[stat.Level - 1];
+            else Description.text = stat.Levels[stat.Level - 1];
+        }
     }
 }

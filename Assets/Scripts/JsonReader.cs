@@ -5,87 +5,115 @@ using UnityEngine;
 
 public class JsonReader : MonoBehaviour
 {
-    public static JsonReader Instance;
-    public Dictionary<string, Ability> abilities;
-    public Dictionary<string, Weakness> weaknesses;
-    public Dictionary<string, Perk> perks;
-    public Dictionary<string, Flaw> flaws;
-
-    private void Awake()
+    public static Dictionary<string, Ability> ReadAbilities(string path)
     {
-        Instance = this;
-        abilities = new Dictionary<string, Ability>();
-        weaknesses = new Dictionary<string, Weakness>();
-        perks = new Dictionary<string, Perk>();
-        flaws = new Dictionary<string, Flaw>();
-
-        ReadAbilities(Application.streamingAssetsPath + "/Abilities.json");
-        ReadWeaknesses(Application.streamingAssetsPath + "/Weaknesses.json");
-        ReadPerks(Application.streamingAssetsPath + "/Perks.json");
-        ReadFlaws(Application.streamingAssetsPath + "/Flaws.json");
-    }
-
-    private void ReadAbilities(string path)
-    {
+        Dictionary<string, Ability> abilities = new Dictionary<string, Ability>();
         if (!File.Exists(path))
         {
             Debug.LogError($"File {path} doesn't exist.");
-            return;
+            return null;
         }
-
         string jsonString = File.ReadAllText(path);
         AbilityCollection abilityCollection = JsonUtility.FromJson<AbilityCollection>(jsonString);
         foreach (Ability ability in abilityCollection.Abilities)
         {
+            ability.Level = 1;
             abilities.Add(ability.Name, ability);
         }
+        return abilities;
     }
 
-    private void ReadWeaknesses(string path)
+    public static Dictionary<string, Weakness> ReadWeaknesses(string path)
     {
+        Dictionary<string, Weakness> weaknesses = new Dictionary<string, Weakness>();
         if (!File.Exists(path))
         {
             Debug.LogError($"File {path} doesn't exist.");
-            return;
+            return null;
         }
-
         string jsonString = File.ReadAllText(path);
         WeaknessCollection weaknessCollection = JsonUtility.FromJson<WeaknessCollection>(jsonString);
         foreach (Weakness weakness in weaknessCollection.Weaknesses)
         {
+            weakness.Level = 1;
             weaknesses.Add(weakness.Name, weakness);
         }
+        return weaknesses;
     }
 
-    private void ReadPerks(string path)
+    public static Dictionary<string, Perk> ReadPerks(string path)
     {
+        Dictionary<string, Perk> perks = new Dictionary<string, Perk>();
         if (!File.Exists(path))
         {
             Debug.LogError($"File {path} doesn't exist.");
-            return;
+            return null;
         }
-
         string jsonString = File.ReadAllText(path);
         PerkCollection perkCollection = JsonUtility.FromJson<PerkCollection>(jsonString);
         foreach (Perk perk in perkCollection.Perks)
         {
             perks.Add(perk.Name, perk);
         }
+        return perks;
     }
 
-    private void ReadFlaws(string path)
+    public static Dictionary<string, Flaw> ReadFlaws(string path)
     {
+        Dictionary<string, Flaw> flaws = new Dictionary<string, Flaw>();
         if (!File.Exists(path))
         {
             Debug.LogError($"File {path} doesn't exist.");
-            return;
+            return null;
         }
-
         string jsonString = File.ReadAllText(path);
         FlawCollection flawCollection = JsonUtility.FromJson<FlawCollection>(jsonString);
         foreach (Flaw flaw in flawCollection.Flaws)
         {
             flaws.Add(flaw.Name, flaw);
         }
+        return flaws;
+    }
+
+    public static Dictionary<string, Character> ReadCharacters()
+    {
+        Dictionary<string, Character> characters = new Dictionary<string, Character>();
+        string path = Application.streamingAssetsPath + "/Characters/";
+        string[] files = Directory.GetFiles(path, "*.json");
+        foreach (string file in files)
+        {
+            Debug.Log(file);
+            GameObject characterGO = Instantiate(ControllerScript.Instance.characterPrefab);
+            Character character = characterGO.GetComponent<Character>();
+            character.model = ReadCharacter(file);
+            characters.Add(character.model.Name, character);
+        }
+
+        return characters;
+    }
+
+    public static CharacterModel ReadCharacter(string path)
+    {
+        if (!File.Exists(path))
+        {
+            Debug.LogError($"File {path} doesn't exist.");
+            return null;
+        }
+
+        string jsonString = File.ReadAllText(path);
+        return JsonUtility.FromJson<CharacterModel>(jsonString);
+    }
+
+    public static List<string> ReadNames(string path)
+    {
+        if (!File.Exists(path))
+        {
+            Debug.LogError($"File {path} doesn't exist.");
+            return null;
+        }
+        string allNames = File.ReadAllText(path);
+        string[] names = allNames.Split('\n');
+
+        return new List<string>(names);
     }
 }

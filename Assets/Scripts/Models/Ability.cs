@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class Ability : Stat
 {
+    public string[] Levels;
 
     public Ability(Ability ability)
     {

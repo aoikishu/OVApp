@@ -2,223 +2,338 @@
 	"Abilities": [
 		{
 			"Name": "Agile",
-			"Description": "Add dice when performing acts of coordination and grace. Add to attack rolls."
+			"Description": "Add dice when performing acts of coordination and grace. Add to attack rolls.",
+			"Page": 49,
+			"Levels" : []
 		},
 		{
 			"Name": "Armored",
-			"Description": "Reduce DX of any attack by 1 down to ½ (or zero, GM’s choice)"
+			"Description": "Reduce DX of any attack by 1 down to ½ (or zero, GM’s choice).",
+			"Page": 49,
+			"Levels" : []
 		},
 		{
 			"Name": "Art of Invisibility",
-			"Description": "Add when attempting to hide or sneak."
+			"Description": "Add when attempting to hide or sneak.",
+			"Page": 50,
+			"Levels" : []
 		},
 		{
 			"Name": "Attack",
-			"Description": "Increase DX."
+			"Description": "Increase DX.",
+			"Page": 50,
+			"Levels" : []
 		},
 		{
 			"Name": "Barrier",
-			"Description": "You may roll your Barrier dice instead of a Defense roll to defend against a hit. If the attack hits, you can buy off damage with endurance. You can use an action to prepare barrier and roll double your barrier dice to defend a hit."
+			"Description": "You may roll your Barrier dice instead of a Defense roll to defend against a hit. If the attack hits, you can buy off damage with endurance. You can use an action to prepare barrier and roll double your barrier dice to defend a hit.",
+			"Page": 51,
+			"Levels" : []
 		},
 		{
 			"Name": "Beautiful",
-			"Description": "Add when attempting to use your appearance to your advantage."
+			"Description": "Add when attempting to use your appearance to your advantage.",
+			"Page": 51,
+			"Levels" : []
 		},
 		{
 			"Name": "Charismatic",
-			"Description": "Add when attempting to convince, distract, inspire, or charm."
+			"Description": "Add when attempting to convince, distract, inspire, or charm.",
+			"Page": 51,
+			"Levels" : []
 		},
 		{
 			"Name": "Combat Expert",
-			"Description": "Add to attack roll showing off offensive expertise or analyzing opponent."
+			"Description": "Add to attack roll showing off offensive expertise or analyzing opponent.",
+			"Page": 51,
+			"Levels" : []
 		},
 		{
 			"Name": "Companion",
-			"Description": "You have companion with Health & Endurance of 20. Has Abilities and Weaknesses equal to your level in companion."
+			"Description": "You have companion with Health & Endurance of 20. Has Abilities and Weaknesses equal to your level in companion.",
+			"Page": 52
 		},
 		{
 			"Name": "Connected",
-			"Description": "You have contacts you can call on depending on level in connected."
+			"Description": "You have contacts you can call on depending on level in connected.",
+			"Page": 52,
+			"Levels" : []
 		},
 		{
 			"Name": "Cute",
-			"Description": "Add when attempting to get what you want, reduce anger, or charm."
+			"Description": "Add when attempting to get what you want, reduce anger, or charm.",
+			"Page": 52,
+			"Levels" : []
 		},
 		{
 			"Name": "Dexterous",
-			"Description": "Roll when attempting fine interactions with your hands."
+			"Description": "Roll when attempting fine interactions with your hands.",
+			"Page": 52,
+			"Levels" : []
 		},
 		{
 			"Name": "Dimentional Pocket",
-			"Description": "Items common to you and are of a liftable weight can be called from the Pocket. Roll your Dimensional Pocket dice and compare it to the DN. DN2: Not Very Useful (Rubber Ducky). DN4: Theoretically Handy (Dinner Plate). DN6: Appropriate Enough (Wooden Practice Sword). DN8: Just What You Needed (Saber). DN10: More Than You Hoped (Automatic Rifle). DN12: Amazingly Apropos (Rocket Launcher)."
+			"Description": "Items common to you and are of a liftable weight can be called from the Pocket. Roll your Dimensional Pocket dice and compare it to the DN. DN2: Not Very Useful (Rubber Ducky). DN4: Theoretically Handy (Dinner Plate). DN6: Appropriate Enough (Wooden Practice Sword). DN8: Just What You Needed (Saber). DN10: More Than You Hoped (Automatic Rifle). DN12: Amazingly Apropos (Rocket Launcher).",
+			"Page": 52,
+			"Levels" : []
 		},
 		{
 			"Name": "Endurance Reserve",
-			"Description": "Regained after a time (like 24 hrs). Can’t be used for stamina-related tasks, receiving drama dice, or damage taken in combat."
+			"Description": "Regained after a time (like 24 hrs). Can’t be used for stamina-related tasks, receiving drama dice, or damage taken in combat.",
+			"Page": 53,
+			"Levels" : []
 		},
 		{
 			"Name": "Evasive",
-			"Description" : "Add dice when attempting to evade."
+			"Description" : "Add dice when attempting to evade.",
+			"Page": 53,
+			"Levels" : []
 		},
 		{
 			"Name": "Famous",
-			"Description" : "Thought of fondly by people you’ve never met based on level."
+			"Description" : "Thought of fondly by people you’ve never met based on level.",
+			"Page": 53,
+			"Levels" : []
 		},
 		{
 			"Name": "Flight",
-			"Description" : "Roll when testing abilities in the air."
+			"Description" : "Roll when testing abilities in the air.",
+			"Page": 54,
+			"Levels" : []
 		},
 		{
 			"Name": "Gear",
-			"Description" : "An object that has its own abilities and weaknesses."
+			"Description" : "An object that has its own abilities and weaknesses.",
+			"Page": 54,
+			"Levels" : []
 		},
 		{
 			"Name": "Healer",
-			"Description" : "Roll healer dice to heal that amount. Takes significant concentration. GM determines max healing per person per day."
+			"Description" : "Roll healer dice to heal that amount. Takes significant concentration. GM determines max healing per person per day.",
+			"Page": 54,
+			"Levels" : []
 		},
 		{
 			"Name": "Heightened Sense",
-			"Description" : "Add dice when using chosen sense."
+			"Description" : "Add dice when using chosen sense.",
+			"Page": 54,
+			"Levels" : []
 		},
 		{
 			"Name": "Illusionist",
-			"Description" : "Create an illusion. Roll your illusionist dice and the result becomes the DN for others to beat. You may receive a bonus or penalty depending on the complexity of the illusion."
+			"Description" : "Create an illusion. Roll your illusionist dice and the result becomes the DN for others to beat. You may receive a bonus or penalty depending on the complexity of the illusion.",
+			"Page": 54,
+			"Levels" : []
 		},
 		{
 			"Name": "Incorporeal Form",
-			"Description" : "You can phase out of the physical world. Increased levels improve your control. You may roll incorporeal form dice instead of a defense roll."
+			"Description" : "You can phase out of the physical world. Increased levels improve your control. You may roll incorporeal form dice instead of a defense roll.",
+			"Page": 55,
+			"Levels" : []
 		},
 		{
 			"Name": "Intimidating",
-			"Description" : "Add dice when trying to intimidate."
+			"Description" : "Add dice when trying to intimidate.",
+			"Page": 55,
+			"Levels" : []
 		},
 		{
 			"Name": "Intuitive",
-			"Description" : "Roll when trying to rely on personal insight."
+			"Description" : "Roll when trying to rely on personal insight.",
+			"Page": 56,
+			"Levels" : []
 		},
 		{
 			"Name": "Inventor",
-			"Description" : "When trying to build something, roll your inventor dice and other dice that may apply and compare it to the DN. Special parts or periods of time may be required. Characters may start with an invention of complexity equal to their level in inventor."
+			"Description" : "When trying to build something, roll your inventor dice and other dice that may apply and compare it to the DN. Special parts or periods of time may be required. Characters may start with an invention of complexity equal to their level in inventor.",
+			"Page": 56,
+			"Levels" : []
 		},
 		{
 			"Name": "Invisibility",
-			"Description" : "Level 1) Just difficult to notice. 2) Very difficult to notice. 3) Invisible, but others could sense your presence in other ways. 4) Invisible to all senses. 5) You leave no trace unless by choice."
+			"Description" : "",
+			"Page": 56,
+			"Levels" : [
+				"Just difficult to notice.",
+				"Very difficult to notice.",
+				"Invisible, but others could sense your presence in other ways.",
+				"Invisible to all senses.",
+				"You leave no trace unless by choice."
+			]
 		},
 		{
 			"Name": "Iron Willed",
-			"Description" : "Add dice when resisting tests of will."
+			"Description" : "Add dice when resisting tests of will.",
+			"Page": 56,
+			"Levels" : []
 		},
 		{
 			"Name": "Knowledge",
-			"Description" : "Choose a topic your character has knowledge in. Add dice when this knowledge would apply. (Typically costs half a level per level put into knowledge)."
+			"Description" : "Choose a topic your character has knowledge in. Add dice when this knowledge would apply. (Typically costs half a level per level put into knowledge).",
+			"Page": 57,
+			"Levels" : []
 		},
 		{
 			"Name": "Life Support",
-			"Description" : "Survive in uninhabitable environments based on level. "
+			"Description" : "Survive in uninhabitable environments based on level.",
+			"Page": 57,
+			"Levels" : []
 		},
 		{
 			"Name": "Lucky",
-			"Description" : "Start with extra drama dice equal to your level in lucky. You are lucky based on level."
+			"Description" : "Start with extra drama dice equal to your level in lucky. You are lucky based on level.",
+			"Page": 57,
+			"Levels" : []
 		},
 		{
 			"Name": "Magic Arcane",
-			"Description" : "Reproduce any ability for yourself or others using endurance. Abilities equal to or less than your level in Arcane automatically succeed. Otherwise, roll your Arcane magic dice along with appropriate dice and compare to the DN. DN = 2 * level of desired ability + 2. Endurance used to cast a spell cannot be regained until the caster relinquishes the effects."
+			"Description" : "Reproduce any ability for yourself or others using endurance. Abilities equal to or less than your level in Arcane automatically succeed. Otherwise, roll your Arcane magic dice along with appropriate dice and compare to the DN. DN = 2 * level of desired ability + 2. Endurance used to cast a spell cannot be regained until the caster relinquishes the effects.",
+			"Page": 57,
+			"Levels" : []
 		},
 		{
 			"Name": "Magic Witchcraft",
-			"Description" : "Same as Magic, Arcane but for weaknesses. A curse can be removed three ways: caster relinquishes it, caster’s health and endurance reduce to zero, someone with a witchcraft level of equal or higher to the original caster can dispel it. At the GM’s discretion, items may be required to remove certain curses."
+			"Description" : "Same as Magic, Arcane but for weaknesses. A curse can be removed three ways: caster relinquishes it, caster’s health and endurance reduce to zero, someone with a witchcraft level of equal or higher to the original caster can dispel it. At the GM’s discretion, items may be required to remove certain curses.",
+			"Page": 58,
+			"Levels" : []
 		},
 		{
 			"Name": "Minions",
-			"Description" : "At level one, summon two minions. Every additional level, double the amount of minions. Minions each have 10 health and 10 endurance. All minions cannot exceed a net +1 in Abilities/Weaknesses. You can combine two minions into one for a 20 health, 20 endurance, net +2 minion, but no further."
+			"Description" : "At level one, summon two minions. Every additional level, double the amount of minions. Minions each have 10 health and 10 endurance. All minions cannot exceed a net +1 in Abilities/Weaknesses. You can combine two minions into one for a 20 health, 20 endurance, net +2 minion, but no further.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Passion",
-			"Description" : "Add passion dice to all actions when a passion of your choice is present or you are in a specific emotional state."
+			"Description" : "Add passion dice to all actions when a passion of your choice is present or you are in a specific emotional state.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Perceptive",
-			"Description" : "Add dice when attempting to notice things."
+			"Description" : "Add dice when attempting to notice things.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Performer",
-			"Description" : "Roll when performing or entertaining."
+			"Description" : "Roll when performing or entertaining.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Pilot",
-			"Description" : "Add when attempting to pilot any vehicle. (Use knowledge instead if you wish to be specific)."
+			"Description" : "Add when attempting to pilot any vehicle. (Use knowledge instead if you wish to be specific).",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Position of Power",
-			"Description" : "You hold power and influence based on level."
+			"Description" : "You hold power and influence based on level.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Psychic",
-			"Description" : "You can read, alter minds, or talk telepathically. roll vs targets roll, both sides including iron-willed and/or weak-willed modifiers. Psychic action with a bonus require no action and little concentration. 0 requires an action and decent concentration. Actions with a penalty require undivided attention."
+			"Description" : "You can read, alter minds, or talk telepathically. roll vs targets roll, both sides including iron-willed and/or weak-willed modifiers. Psychic action with a bonus require no action and little concentration. 0 requires an action and decent concentration. Actions with a penalty require undivided attention.",
+			"Page": 59,
+			"Levels" : []
 		},
 		{
 			"Name": "Quick",
-			"Description" : "Add dice when you can use speed to react."
+			"Description" : "Add dice when you can use speed to react.",
+			"Page": 60,
+			"Levels" : []
 		},
 		{
 			"Name": "Resistance",
-			"Description" : "Resilient to a specific type of power or attack. If an attack, DX is reduced, and can reduce to negative. Other abilities suffer a penalty to their roll."
+			"Description" : "Resilient to a specific type of power or attack. If an attack, DX is reduced, and can reduce to negative. Other abilities suffer a penalty to their roll.",
+			"Page": 60,
+			"Levels" : []
 		},
 		{
 			"Name": "Shape Shifter",
-			"Description" : "Shape-shift based on level."
+			"Description" : "Shape-shift based on level.",
+			"Page": 60,
+			"Levels" : []
 		},
 		{
 			"Name": "Sixth Sense",
-			"Description" : "Roll to get a feeling for a person, situation, or unforeseen threats."
+			"Description" : "Roll to get a feeling for a person, situation, or unforeseen threats.",
+			"Page": 61,
+			"Levels" : []
 		},
 		{
 			"Name": "Smart",
-			"Description" : "Roll for anything challenging your IQ"
+			"Description" : "Roll for anything challenging your IQ.",
+			"Page": 61,
+			"Levels" : []
 		},
 		{
 			"Name": "Spirit Medium",
-			"Description" : "Roll against a spirit’s highest ability level when trying to banish or summon a spirit. "
+			"Description" : "Roll against a spirit’s highest ability level when trying to banish or summon a spirit.",
+			"Page": 61,
+			"Levels" : []
 		},
 		{
 			"Name": "Strong",
-			"Description" : "Add dice when performing acts of physical strength. Also is a bonus to your DX when striking with power. "
+			"Description" : "Add dice when performing acts of physical strength. Also is a bonus to your DX when striking with power.",
+			"Page": 62,
+			"Levels" : []
 		},
 		{
 			"Name": "Telekinesis",
-			"Description" : "Roll telekinesis much like the strong ability to move heavy objects. You can add your telekinesis level as a bonus to your DX when performing an attack with telekinesis."
+			"Description" : "Roll telekinesis much like the strong ability to move heavy objects. You can add your telekinesis level as a bonus to your DX when performing an attack with telekinesis.",
+			"Page": 62,
+			"Levels" : []
 		},
 		{
 			"Name": "Teleport",
-			"Description" : "Roll vs DN to teleport. You may roll teleport instead of a defense roll."
+			"Description" : "Roll vs DN to teleport. You may roll teleport instead of a defense roll.",
+			"Page": 62,
+			"Levels" : []
 		},
 		{
 			"Name": "Time Freeze",
-			"Description" : "You can slow or freeze the flow of time. As an action, gain bonus in speed and quickness or enemies gain penalties equal to your level in Time freeze."
+			"Description" : "You can slow or freeze the flow of time. As an action, gain bonus in speed and quickness or enemies gain penalties equal to your level in Time freeze.",
+			"Page": 63,
+			"Levels" : []
 		},
 		{
 			"Name": "Tough",
-			"Description" : "Gain a bonus to health. Add tough when exhibiting resilience and durability."
+			"Description" : "Gain a bonus to health. Add tough when exhibiting resilience and durability.",
+			"Page": 63,
+			"Levels" : []
 		},
 		{
 			"Name": "Transformation",
-			"Description" : "For every level in transformation, spend double that in new and improved abilities and weaknesses."
+			"Description" : "For every level in transformation, spend double that in new and improved abilities and weaknesses.",
+			"Page": 63,
+			"Levels" : []
 		},
 		{
 			"Name": "Vehicle",
-			"Description" : "Use double your vehicle level to build your vehicle with abilities."
+			"Description" : "Use double your vehicle level to build your vehicle with abilities.",
+			"Page": 64,
+			"Levels" : []
 		},
 		{
 			"Name": "Vigorous",
-			"Description" : "Bonus endurance. Roll to resist ailments, exhaustion, and recover health."
+			"Description" : "Bonus endurance. Roll to resist ailments, exhaustion, and recover health.",
+			"Page": 65,
+			"Levels" : []
 		},
 		{
 			"Name": "Walking Arsenal",
-			"Description" : "Choose another ability as a focus, such as gear or vehicle. Choose a theme. If it’s an object of that ability and theme and is of equal or less level than your level in Walking Arsenal, then you have it."
+			"Description" : "Choose another ability as a focus, such as gear or vehicle. Choose a theme. If it’s an object of that ability and theme and is of equal or less level than your level in Walking Arsenal, then you have it.",
+			"Page": 65,
+			"Levels" : []
 		},
 		{
 			"Name": "Wealthy",
-			"Description" : "You have money based on level."
+			"Description" : "You have money based on level.",
+			"Page": 65,
+			"Levels" : []
 		}
 	]
 }

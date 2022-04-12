@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Character : MonoBehaviour
+public class CharacterModel
 {
     public string Name;
     public int Defense;
@@ -17,27 +17,11 @@ public class Character : MonoBehaviour
     public List<Weakness> Weaknesses;
     public List<Attack> Attacks;
 
-    private void Awake()
+    public CharacterModel()
     {
         Health = 40;
         Endurance = 40;
         NetLevel = 0;
-
-        Abilities = new List<Ability>();
-        Weaknesses = new List<Weakness>();
-        Attacks = new List<Attack>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            Attack attack = new Attack();
-            Attacks.Add(attack);
-        }
-
-        AssignAbilitiesAndWeaknesses();
     }
 
     public void AssignAbilitiesAndWeaknesses()

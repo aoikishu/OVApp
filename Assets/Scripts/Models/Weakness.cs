@@ -4,6 +4,7 @@ using System.Collections.Generic;
 [Serializable]
 public class Weakness : Stat
 {
+    public string[] Levels;
 
     public Weakness(Weakness weakness)
     {

@@ -8,5 +8,6 @@ public class Stat
 {
     public string Name;
     public string Description;
+    public int Page;
     public int Level;
 }

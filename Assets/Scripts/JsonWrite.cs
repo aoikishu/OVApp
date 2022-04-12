@@ -9,8 +9,8 @@ public static class JsonWrite
     {
         foreach(Character character in characterList)
         {
-            string path = Application.streamingAssetsPath + "/" + character.Name + ".json";
-            string json = JsonUtility.ToJson(character, true);
+            string path = Application.streamingAssetsPath + "/Characters/" + character.model.Name + ".json";
+            string json = JsonUtility.ToJson(character.model, true);
             File.WriteAllText(path, json);
         }
     }

@@ -21,13 +21,23 @@ public class ControllerScript : MonoBehaviour
     public TextMeshProUGUI weaknessCount;
     public TMP_InputField nameField;
 
-    public Dictionary<string, Character> Characters;
+    internal static List<string> names;
+    internal static Dictionary<string, Character> characters;
+    internal static Dictionary<string, Ability> abilities;
+    internal static Dictionary<string, Weakness> weaknesses;
+    internal static Dictionary<string, Perk> perks;
+    internal static Dictionary<string, Flaw> flaws;
 
     private void Awake()
     {
         Instance = this;
         Screen.SetResolution(1000, 600, false);
-        Characters = new Dictionary<string, Character>();
+        names = JsonReader.ReadNames(Application.streamingAssetsPath + "/names.txt");
+        abilities = JsonReader.ReadAbilities(Application.streamingAssetsPath + "/Abilities.json");
+        weaknesses = JsonReader.ReadWeaknesses(Application.streamingAssetsPath + "/Weaknesses.json");
+        perks = JsonReader.ReadPerks(Application.streamingAssetsPath + "/Perks.json");
+        flaws = JsonReader.ReadFlaws(Application.streamingAssetsPath + "/Flaws.json");
+        characters = JsonReader.ReadCharacters();
     }
 
     private void Update()
@@ -37,7 +47,11 @@ public class ControllerScript : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        List<Character> characterList = Characters.Values.ToList();
+        List<Character> characterList = characters.Values.ToList();
+        foreach(Character character in characterList)
+        {
+            Debug.Log("Saving Character: " + character.model.Name);
+        }
         JsonWrite.SaveCharacters(characterList);
     }
 
@@ -45,11 +59,12 @@ public class ControllerScript : MonoBehaviour
     {
         GameObject characterGO = Instantiate(characterPrefab);
         Character character = characterGO.GetComponent<Character>();
-        character.Name = nameField.text;
+        if (!string.IsNullOrEmpty(nameField.text)) character.model.Name = nameField.text;
+        else character.model.Name = GenerateName();
 
         try
         {
-            Characters.Add(character.Name, character);
+            characters.Add(character.model.Name, character);
             // TODO: Not sure if coroutine is needed.
             Clear();
             StartCoroutine(Wait(character));
@@ -61,6 +76,11 @@ public class ControllerScript : MonoBehaviour
         }
     }
 
+    public string GenerateName()
+    {
+        return names[Random.Range(0, names.Count)];
+    }
+
     IEnumerator Wait(Character character)
     {
         yield return new WaitForSeconds(0.1f);
@@ -69,19 +89,21 @@ public class ControllerScript : MonoBehaviour
 
     public void PopulateContent(Character character)
     {
+        Debug.Log("Populating " + character.model.Name);
+        Clear();
         string text;
-        foreach (Ability ability in character.Abilities)
+        foreach (Ability ability in character.model.Abilities)
         {
             SpawnAbility(ability);
         }
 
-        foreach (Weakness weakness in character.Weaknesses)
+        foreach (Weakness weakness in character.model.Weaknesses)
         {
             SpawnWeakness(weakness);
         }
 
         int i = 0;
-        foreach (Attack attack in character.Attacks)
+        foreach (Attack attack in character.model.Attacks)
         {
             i++;
             text = $"Attack {i}\t({attack.EnduranceCost})";
@@ -101,13 +123,17 @@ public class ControllerScript : MonoBehaviour
 
     public void ListCharacters()
     {
-
+        Clear();
+        foreach (Character character in characters.Values)
+        {
+            SpawnCharacter(character.model.Name, character);
+        }
     }
 
     public void ListAbilities()
     {
         Clear();
-        foreach (Ability ability in JsonReader.Instance.abilities.Values)
+        foreach (Ability ability in abilities.Values)
         {
             SpawnAbility(ability);
         }
@@ -116,7 +142,7 @@ public class ControllerScript : MonoBehaviour
     public void ListWeaknesses()
     {
         Clear();
-        foreach (Weakness weakness in JsonReader.Instance.weaknesses.Values)
+        foreach (Weakness weakness in weaknesses.Values)
         {
             SpawnWeakness(weakness);
         }
@@ -125,7 +151,7 @@ public class ControllerScript : MonoBehaviour
     public void ListPerks()
     {
         Clear();
-        foreach (Perk perk in JsonReader.Instance.perks.Values)
+        foreach (Perk perk in perks.Values)
         {
             SpawnPerk(perk);
         }
@@ -134,10 +160,19 @@ public class ControllerScript : MonoBehaviour
     public void ListFlaws()
     {
         Clear();
-        foreach (Flaw flaw in JsonReader.Instance.flaws.Values)
+        foreach (Flaw flaw in flaws.Values)
         {
             SpawnFlaw(flaw);
         }
+    }
+
+    public void SpawnCharacter(string value, Character character)
+    {
+        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        textGO.name = "Attack";
+        textGO.GetComponentInChildren<TextMeshProUGUI>().text = value;
+
+        textGO.GetComponent<Button>().onClick.AddListener(delegate { PopulateContent(character); });
     }
 
     public void SpawnAttack(string value, Attack attack)
