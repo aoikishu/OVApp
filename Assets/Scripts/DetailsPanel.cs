@@ -13,7 +13,7 @@ public class DetailsPanel : MonoBehaviour
     [SerializeField]
     private TMP_InputField Description;
     [SerializeField]
-    private TMP_InputField Notes;
+    private TMP_InputField Note;
     [SerializeField]
     private TextMeshProUGUI LevelOrModifierLabel;
     [SerializeField]
@@ -37,6 +37,7 @@ public class DetailsPanel : MonoBehaviour
         Title.text = (stat.Name);
         Description.text = (stat.Description);
         PgValue.text = stat.Page.ToString();
+        if (stat.Note != null) Note.text = stat.Note;
     }
 
     public void Open(Ability ability)
@@ -44,7 +45,6 @@ public class DetailsPanel : MonoBehaviour
         OpenStat(ability);
         LevelOrModifierLabel.text = "Lv";
         SetSlider(ability.Level, 1, 5);
-        Debug.Log($"Level {ability.Level}, Levels: {ability.Levels.Length}");
         Describe(ability);
     }
 
@@ -84,6 +84,11 @@ public class DetailsPanel : MonoBehaviour
         LevelOrModifierSlider.value = value;
     }
 
+    public void OnNoteFieldChanged(string value)
+    {
+        stat.Note = value;
+    }
+
     public void OnSliderChanged(float value)
     {
         LevelOrModifierValue.text = value.ToString();
@@ -94,6 +99,7 @@ public class DetailsPanel : MonoBehaviour
 
     private void Describe(Ability stat)
     {
+        if (stat.Levels == null) return;
         if (stat.Levels.Length > 0) {
             if (!string.IsNullOrEmpty(stat.Description)) Description.text = stat.Description + "\n" + stat.Levels[stat.Level - 1];
             else Description.text = stat.Levels[stat.Level - 1];
@@ -102,8 +108,8 @@ public class DetailsPanel : MonoBehaviour
 
     private void Describe(Weakness stat)
     {
-        if (stat.Levels.Length > 0)
-        {
+        if (stat.Levels == null) return;
+        if (stat.Levels.Length > 0) {
             if (!string.IsNullOrEmpty(stat.Description)) Description.text = stat.Description + "\n" + stat.Levels[stat.Level - 1];
             else Description.text = stat.Levels[stat.Level - 1];
         }

@@ -8,16 +8,22 @@ public class Weakness : Stat
 
     public Weakness(Weakness weakness)
     {
-        Name = weakness.Name;
-        Description = weakness.Description;
-        Level = 1;
+        Copy(weakness);
     }
 
     public Weakness(Weakness weakness, int level)
     {
+        Copy(weakness);
+        Level = level;
+    }
+
+    public void Copy(Weakness weakness)
+    {
         Name = weakness.Name;
         Description = weakness.Description;
-        Level = level;
+        Page = weakness.Page;
+        Levels = weakness.Levels;
+        Level = 1;
     }
 }
 

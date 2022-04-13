@@ -11,7 +11,6 @@ public class ControllerScript : MonoBehaviour
     public static ControllerScript Instance;
     public GameObject characterPrefab;
     public DetailsPanel detailsPanel;
-    public GameObject textPrefab;
     public GameObject listItemPrefab;
     public Transform contentPanel;
     public GameObject navPanel;
@@ -61,6 +60,7 @@ public class ControllerScript : MonoBehaviour
         Character character = characterGO.GetComponent<Character>();
         if (!string.IsNullOrEmpty(nameField.text)) character.model.Name = nameField.text;
         else character.model.Name = GenerateName();
+        character.CreateCharacter();
 
         try
         {
@@ -92,12 +92,12 @@ public class ControllerScript : MonoBehaviour
         Debug.Log("Populating " + character.model.Name);
         Clear();
         string text;
-        foreach (Ability ability in character.model.Abilities)
+        foreach (Ability ability in character.model.Abilities.Values)
         {
             SpawnAbility(ability);
         }
 
-        foreach (Weakness weakness in character.model.Weaknesses)
+        foreach (Weakness weakness in character.model.Weaknesses.Values)
         {
             SpawnWeakness(weakness);
         }
@@ -168,7 +168,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnCharacter(string value, Character character)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Attack";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = value;
 
@@ -177,7 +177,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnAttack(string value, Attack attack)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Attack";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = value;
 
@@ -186,7 +186,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnAbility(Ability ability)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Ability";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = ability.Name;
 
@@ -195,7 +195,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnWeakness(Weakness weakness)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Weakness";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = weakness.Name;
 
@@ -204,7 +204,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnPerk(Perk perk)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Perk";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t+ {perk.Name} ({perk.Modifier})";
 
@@ -213,7 +213,7 @@ public class ControllerScript : MonoBehaviour
 
     public void SpawnFlaw(Flaw flaw)
     {
-        GameObject textGO = Instantiate(textPrefab, contentPanel);
+        GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Flaw";
         textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t- {flaw.Name} ({flaw.Modifier})";
 

@@ -8,16 +8,22 @@ public class Ability : Stat
 
     public Ability(Ability ability)
     {
-        Name = ability.Name;
-        Description = ability.Description;
-        Level = 1;
+        Copy(ability);
     }
 
     public Ability(Ability ability, int level)
     {
+        Copy(ability);
+        Level = level;
+    }
+
+    public void Copy(Ability ability)
+    {
         Name = ability.Name;
         Description = ability.Description;
-        Level = level;
+        Page = ability.Page;
+        Levels = ability.Levels;
+        Level = 1;
     }
 }
 

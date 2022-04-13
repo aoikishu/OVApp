@@ -9,14 +9,15 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        model = new CharacterModel();
-        model.Abilities = new List<Ability>();
-        model.Weaknesses = new List<Weakness>();
-        model.Attacks = new List<Attack>();
+        model = new CharacterModel
+        {
+            Abilities = new Dictionary<string, Ability>(),
+            Weaknesses = new Dictionary<string, Weakness>(),
+            Attacks = new List<Attack>()
+        };
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void CreateCharacter()
     {
         for (int i = 0; i < 4; i++)
         {

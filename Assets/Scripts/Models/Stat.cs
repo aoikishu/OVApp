@@ -10,4 +10,5 @@ public class Stat
     public string Description;
     public int Page;
     public int Level;
+    public string Note;
 }
