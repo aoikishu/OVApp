@@ -5,6 +5,7 @@ using UnityEngine;
 
 public static class Randomizer
 {
+    private const string RANDOM_CHARACTERS = "abcdefghijklmnopqrstuvwxyz0123456789";
 
     public static Ability RandomAbility()
     {
@@ -32,5 +33,15 @@ public static class Randomizer
         List<Flaw> flaws = ControllerScript.flaws.Values.ToList();
         int i = Random.Range(0, flaws.Count);
         return new Flaw(flaws[i]);
+    }
+
+    public static string RandomID()
+    {
+        string s = "";
+        for(int i = 0; i < 12; i++)
+        {
+            s += RANDOM_CHARACTERS[Random.Range(0, RANDOM_CHARACTERS.Length)];
+        }
+        return s;
     }
 }

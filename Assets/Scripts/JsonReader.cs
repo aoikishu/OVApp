@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -8,13 +7,7 @@ public class JsonReader : MonoBehaviour
     public static Dictionary<string, Ability> ReadAbilities(string path)
     {
         Dictionary<string, Ability> abilities = new Dictionary<string, Ability>();
-        if (!File.Exists(path))
-        {
-            Debug.LogError($"File {path} doesn't exist.");
-            return null;
-        }
-        string jsonString = File.ReadAllText(path);
-        AbilityCollection abilityCollection = JsonUtility.FromJson<AbilityCollection>(jsonString);
+        AbilityCollection abilityCollection = JsonUtility.FromJson<AbilityCollection>(Read(path));
         foreach (Ability ability in abilityCollection.Abilities)
         {
             ability.Level = 1;
@@ -26,13 +19,7 @@ public class JsonReader : MonoBehaviour
     public static Dictionary<string, Weakness> ReadWeaknesses(string path)
     {
         Dictionary<string, Weakness> weaknesses = new Dictionary<string, Weakness>();
-        if (!File.Exists(path))
-        {
-            Debug.LogError($"File {path} doesn't exist.");
-            return null;
-        }
-        string jsonString = File.ReadAllText(path);
-        WeaknessCollection weaknessCollection = JsonUtility.FromJson<WeaknessCollection>(jsonString);
+        WeaknessCollection weaknessCollection = JsonUtility.FromJson<WeaknessCollection>(Read(path));
         foreach (Weakness weakness in weaknessCollection.Weaknesses)
         {
             weakness.Level = 1;
@@ -44,13 +31,7 @@ public class JsonReader : MonoBehaviour
     public static Dictionary<string, Perk> ReadPerks(string path)
     {
         Dictionary<string, Perk> perks = new Dictionary<string, Perk>();
-        if (!File.Exists(path))
-        {
-            Debug.LogError($"File {path} doesn't exist.");
-            return null;
-        }
-        string jsonString = File.ReadAllText(path);
-        PerkCollection perkCollection = JsonUtility.FromJson<PerkCollection>(jsonString);
+        PerkCollection perkCollection = JsonUtility.FromJson<PerkCollection>(Read(path));
         foreach (Perk perk in perkCollection.Perks)
         {
             perks.Add(perk.Name, perk);
@@ -61,13 +42,7 @@ public class JsonReader : MonoBehaviour
     public static Dictionary<string, Flaw> ReadFlaws(string path)
     {
         Dictionary<string, Flaw> flaws = new Dictionary<string, Flaw>();
-        if (!File.Exists(path))
-        {
-            Debug.LogError($"File {path} doesn't exist.");
-            return null;
-        }
-        string jsonString = File.ReadAllText(path);
-        FlawCollection flawCollection = JsonUtility.FromJson<FlawCollection>(jsonString);
+        FlawCollection flawCollection = JsonUtility.FromJson<FlawCollection>(Read(path));
         foreach (Flaw flaw in flawCollection.Flaws)
         {
             flaws.Add(flaw.Name, flaw);
@@ -78,7 +53,7 @@ public class JsonReader : MonoBehaviour
     public static Dictionary<string, Character> ReadCharacters()
     {
         Dictionary<string, Character> characters = new Dictionary<string, Character>();
-        string path = Application.streamingAssetsPath + "/Characters/";
+        string path = ControllerScript.CONST_PATH + "/Characters/";
         string[] files = Directory.GetFiles(path, "*.json");
         foreach (string file in files)
         {
@@ -94,14 +69,27 @@ public class JsonReader : MonoBehaviour
 
     public static CharacterModel ReadCharacter(string path)
     {
-        if (!File.Exists(path))
+        return JsonUtility.FromJson<CharacterModel>(Read(path));
+    }
+
+    public static Dictionary<string, Attack> ReadAttacks()
+    {
+        Dictionary<string, Attack> attacks = new Dictionary<string, Attack>();
+        string path = ControllerScript.CONST_PATH + "/Attacks/";
+        string[] files = Directory.GetFiles(path, "*.json");
+        foreach (string file in files)
         {
-            Debug.LogError($"File {path} doesn't exist.");
-            return null;
+            Debug.Log(file);
+            Attack attack = ReadAttack(file);
+            attacks.Add(attack.ID, attack);
         }
 
-        string jsonString = File.ReadAllText(path);
-        return JsonUtility.FromJson<CharacterModel>(jsonString);
+        return attacks;
+    }
+
+    public static Attack ReadAttack(string path)
+    {
+        return JsonUtility.FromJson<Attack>(Read(path));
     }
 
     public static List<string> ReadNames(string path)
@@ -115,5 +103,13 @@ public class JsonReader : MonoBehaviour
         string[] names = allNames.Split('\n');
 
         return new List<string>(names);
+    }
+
+    private static string Read(string path)
+    {
+        using (StreamReader sr = new StreamReader(path))
+        {
+            return sr.ReadToEnd();
+        }
     }
 }

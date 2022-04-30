@@ -22,21 +22,31 @@ public class ControllerScript : MonoBehaviour
 
     internal static List<string> names;
     internal static Dictionary<string, Character> characters;
+    internal static Dictionary<string, Attack> attacks;
     internal static Dictionary<string, Ability> abilities;
     internal static Dictionary<string, Weakness> weaknesses;
     internal static Dictionary<string, Perk> perks;
     internal static Dictionary<string, Flaw> flaws;
+    internal static Character currentCharacter;
+    internal static string CONST_PATH;
 
     private void Awake()
     {
         Instance = this;
-        Screen.SetResolution(1000, 600, false);
-        names = JsonReader.ReadNames(Application.streamingAssetsPath + "/names.txt");
-        abilities = JsonReader.ReadAbilities(Application.streamingAssetsPath + "/Abilities.json");
-        weaknesses = JsonReader.ReadWeaknesses(Application.streamingAssetsPath + "/Weaknesses.json");
-        perks = JsonReader.ReadPerks(Application.streamingAssetsPath + "/Perks.json");
-        flaws = JsonReader.ReadFlaws(Application.streamingAssetsPath + "/Flaws.json");
+        CONST_PATH = Application.persistentDataPath;
+        names = JsonReader.ReadNames(CONST_PATH + "/Names.txt");
+        abilities = JsonReader.ReadAbilities(CONST_PATH + "/Abilities.json");
+        weaknesses = JsonReader.ReadWeaknesses(CONST_PATH + "/Weaknesses.json");
+        perks = JsonReader.ReadPerks(CONST_PATH + "/Perks.json");
+        flaws = JsonReader.ReadFlaws(CONST_PATH + "/Flaws.json");
         characters = JsonReader.ReadCharacters();
+        attacks = JsonReader.ReadAttacks();
+        Screen.SetResolution(1024, 1024, false);
+    }
+
+    private void Start()
+    {
+        ListCharacters();
     }
 
     private void Update()
@@ -52,13 +62,20 @@ public class ControllerScript : MonoBehaviour
             Debug.Log("Saving Character: " + character.model.Name);
         }
         JsonWrite.SaveCharacters(characterList);
+
+        List<Attack> attackList = attacks.Values.ToList();
+        foreach (Attack attack in attackList)
+        {
+            Debug.Log("Saving Attack: " + attack.Name);
+        }
+        JsonWrite.SaveAttacks(attackList);
     }
 
     public void CreateCharacter()
     {
         GameObject characterGO = Instantiate(characterPrefab);
         Character character = characterGO.GetComponent<Character>();
-        if (!string.IsNullOrEmpty(nameField.text)) character.model.Name = nameField.text;
+        if (!string.IsNullOrEmpty(nameField.text) && !characters.ContainsKey(nameField.text)) character.model.Name = nameField.text;
         else character.model.Name = GenerateName();
         character.CreateCharacter();
 
@@ -89,6 +106,7 @@ public class ControllerScript : MonoBehaviour
 
     public void PopulateContent(Character character)
     {
+        nameField.text = character.model.Name;
         Debug.Log("Populating " + character.model.Name);
         Clear();
         string text;
@@ -103,22 +121,30 @@ public class ControllerScript : MonoBehaviour
         }
 
         int i = 0;
-        foreach (Attack attack in character.model.Attacks)
+        foreach (string attackID in character.model.Attacks)
         {
             i++;
-            text = $"Attack {i}\t({attack.EnduranceCost})";
+            Attack attack = ControllerScript.attacks[attackID];
+            text = $"{attack.Name}\t({attack.EnduranceCost})";
             SpawnAttack(text, attack);
-            foreach (Perk perk in attack.perks)
+            foreach (Perk perk in attack.Perks.Values)
             {
-                text = $"\t+ {perk.Name}\t({perk.Modifier})";
+                perk.parentAttack = attack;
                 SpawnPerk(perk);
             }
-            foreach (Flaw flaw in attack.flaws)
+            foreach (Flaw flaw in attack.Flaws.Values)
             {
-                text = $"\t- {flaw.Name}\t({flaw.Modifier})";
+                flaw.parentAttack = attack;
                 SpawnFlaw(flaw);
             }
         }
+
+        currentCharacter = character;
+    }
+
+    public void ListAttacks()
+    {
+
     }
 
     public void ListCharacters()
@@ -128,6 +154,7 @@ public class ControllerScript : MonoBehaviour
         {
             SpawnCharacter(character.model.Name, character);
         }
+        navPanel.SetActive(false);
     }
 
     public void ListAbilities()
@@ -137,6 +164,7 @@ public class ControllerScript : MonoBehaviour
         {
             SpawnAbility(ability);
         }
+        navPanel.SetActive(false);
     }
 
     public void ListWeaknesses()
@@ -146,6 +174,7 @@ public class ControllerScript : MonoBehaviour
         {
             SpawnWeakness(weakness);
         }
+        navPanel.SetActive(false);
     }
 
     public void ListPerks()
@@ -155,6 +184,7 @@ public class ControllerScript : MonoBehaviour
         {
             SpawnPerk(perk);
         }
+        navPanel.SetActive(false);
     }
 
     public void ListFlaws()
@@ -164,6 +194,7 @@ public class ControllerScript : MonoBehaviour
         {
             SpawnFlaw(flaw);
         }
+        navPanel.SetActive(false);
     }
 
     public void SpawnCharacter(string value, Character character)
@@ -187,18 +218,20 @@ public class ControllerScript : MonoBehaviour
     public void SpawnAbility(Ability ability)
     {
         GameObject textGO = Instantiate(listItemPrefab, contentPanel);
-        textGO.name = "Ability";
-        textGO.GetComponentInChildren<TextMeshProUGUI>().text = ability.Name;
-
+        textGO.name = ability.Name;
+        TextMeshProUGUI txt = textGO.GetComponentInChildren<TextMeshProUGUI>();
+        txt.text = ability.Name + " : " + ability.Level;
+        if (!string.IsNullOrEmpty(ability.Note)) txt.text += "\t\t(" + ability.Note + ")";
         textGO.GetComponent<Button>().onClick.AddListener(delegate { OnClick(ability); });
     }
 
     public void SpawnWeakness(Weakness weakness)
     {
         GameObject textGO = Instantiate(listItemPrefab, contentPanel);
-        textGO.name = "Weakness";
-        textGO.GetComponentInChildren<TextMeshProUGUI>().text = weakness.Name;
-
+        textGO.name = weakness.Name;
+        TextMeshProUGUI txt = textGO.GetComponentInChildren<TextMeshProUGUI>();
+        txt.text = weakness.Name + " : " + weakness.Level;
+        if (!string.IsNullOrEmpty(weakness.Note)) txt.text += "\t\t(" + weakness.Note + ")";
         textGO.GetComponent<Button>().onClick.AddListener(delegate { OnClick(weakness); });
     }
 
@@ -206,7 +239,8 @@ public class ControllerScript : MonoBehaviour
     {
         GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Perk";
-        textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t+ {perk.Name} ({perk.Modifier})";
+        if (perk.Level > 1) textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t+ {perk.Name} ({perk.Modifier}) x{perk.Level}";
+        else textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t+ {perk.Name} ({perk.Modifier})";
 
         textGO.GetComponent<Button>().onClick.AddListener(delegate{ OnClick(perk); });
     }
@@ -215,7 +249,8 @@ public class ControllerScript : MonoBehaviour
     {
         GameObject textGO = Instantiate(listItemPrefab, contentPanel);
         textGO.name = "Flaw";
-        textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t- {flaw.Name} ({flaw.Modifier})";
+        if (flaw.Level > 1) textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t- {flaw.Name} ({flaw.Modifier}) x{flaw.Level}";
+        else textGO.GetComponentInChildren<TextMeshProUGUI>().text = $"\t+ {flaw.Name} ({flaw.Modifier})";
 
         textGO.GetComponent<Button>().onClick.AddListener(delegate { OnClick(flaw); });
     }

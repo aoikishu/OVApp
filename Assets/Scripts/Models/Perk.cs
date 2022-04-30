@@ -4,6 +4,8 @@ using System.Collections.Generic;
 [Serializable]
 public class Perk : Stat
 {
+    [NonSerialized]
+    public Attack parentAttack;
     public int Modifier;
 
     public Perk(Perk perk)
@@ -20,6 +22,12 @@ public class Perk : Stat
         Description = perk.Description;
         Modifier = perk.Modifier;
         Level = level;
+    }
+
+    public bool isUnique()
+    {
+        if (Description.ToLower().Contains("for each time")) return false;
+        return true;
     }
 }
 

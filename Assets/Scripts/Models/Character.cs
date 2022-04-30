@@ -6,6 +6,7 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     public CharacterModel model;
+    private int atkCount = 0;
 
     private void Awake()
     {
@@ -13,18 +14,23 @@ public class Character : MonoBehaviour
         {
             Abilities = new Dictionary<string, Ability>(),
             Weaknesses = new Dictionary<string, Weakness>(),
-            Attacks = new List<Attack>()
+            Attacks = new List<string>()
         };
     }
 
     public void CreateCharacter()
     {
+        model.AssignAbilitiesAndWeaknesses();
+        
         for (int i = 0; i < 4; i++)
         {
-            Attack attack = new Attack();
-            model.Attacks.Add(attack);
+            atkCount++;
+            Attack attack = new Attack(model);
+            attack.Name = $"Atk {atkCount}";
+            attack.AssignPerksAndFlaws();
+            attack.CalculateDX();
+            attack.CalculateRoll();
+            model.Attacks.Add(attack.ID);
         }
-
-        model.AssignAbilitiesAndWeaknesses();
     }
 }

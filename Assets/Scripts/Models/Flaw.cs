@@ -4,6 +4,8 @@ using System.Collections.Generic;
 [Serializable]
 public class Flaw : Stat
 {
+    [NonSerialized]
+    public Attack parentAttack;
     public int Modifier;
 
     public Flaw(Flaw flaw)
@@ -20,6 +22,12 @@ public class Flaw : Stat
         Description = flaw.Description;
         Modifier = flaw.Modifier;
         Level = level;
+    }
+
+    public bool isUnique()
+    {
+        if (Description.ToLower().Contains("for each time")) return false;
+        return true;
     }
 }
 
